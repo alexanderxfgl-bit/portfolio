@@ -1,0 +1,61 @@
+🚀 API Integration Demo - GitHub
+============================================================
+
+✅ Authentication: Successful (Rate limit: 4998/5000/hour)
+
+📊 User Profile: octocat
+   ├─ Name: The Octocat
+   ├─ Bio: Hi, I'm the Octocat!
+   ├─ Public Repos: 8
+   ├─ Followers: 15000
+   └─ Following: 9
+
+📁 Recent Repositories:
+   1. Hello-World
+      ├─ Stars: 2500 ⭐
+      ├─ Language: -
+      └─ Updated: 2024-01-10
+
+   2. Spoon-Knife
+      ├─ Stars: 12000 ⭐
+      ├─ Language: HTML
+      └─ Updated: 2024-01-08
+
+   3. Hello-World
+      ├─ Stars: 1800 ⭐
+      ├─ Language: JavaScript
+      └─ Updated: 2024-01-05
+
+⏱️  Rate Limit Remaining: 4998/5000
+
+🌤️  Weather API Demo
+============================================================
+
+📍 Location: San Francisco, US
+🌡️  Temperature: 18.5°C
+💧 Humidity: 72%
+💨 Wind Speed: 12.5 m/s
+☁️  Conditions: Partly Cloudy
+
+📈 5-Day Forecast:
+   2024-01-15: ☀️ 18°C / 12°C - Clear
+   2024-01-16: 🌤️ 19°C / 13°C - Clouds
+   2024-01-17: 🌧️ 16°C / 11°C - Rain
+   2024-01-18: 🌤️ 17°C / 12°C - Clouds
+   2024-01-19: ☀️ 20°C / 14°C - Clear
+
+🧪 JSONPlaceholder API Demo (Mock Data)
+============================================================
+
+📝 Sample Posts:
+   • sunt aut facere repellat provident occaecati excepturi optio reprehenderit...
+   • qui est esse...
+   • ea molestias quasi exercitationem repellat qui ipsa sit aut...
+
+✏️  Creating new post...
+   ✓ Created post ID: 101
+   ✓ Title: API Integration Demo
+
+============================================================
+✅ All demos completed!
+============================================================

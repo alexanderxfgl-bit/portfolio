@@ -1,0 +1,35 @@
+📊 Data Cleaning Report
+==================================================
+Input Rows: 10
+Output Rows: 7
+Retention Rate: 70.0%
+
+Transformations Applied:
+  1. Removed 1 duplicate rows
+  2. Standardized column names to snake_case
+  3. Cleaned text in 1 columns
+  4. Removed 2 rows with invalid emails
+  5. Type Conversions:
+     - purchase_date: → datetime
+     - amount: → float
+     - quantity: → int
+  6. Removed 1 outliers using iqr
+  7. Extracted date parts from 'purchase_date'
+
+Duplicates Removed: 1
+Outliers Detected: 1
+
+Type Conversions:
+  - purchase_date: → datetime
+  - amount: → float
+  - quantity: → int
+
+📁 Cleaned Data Sample (first 5 rows):
+==================================================
+
+customer_name,email,phone,purchase_date,amount,quantity,region,email_valid,purchase_date_year,purchase_date_month,purchase_date_day,purchase_date_weekday
+John Doe,john@example.com,555-1234,2024-01-15,150.00,2,North,True,2024,1,15,0
+Jane Smith,jane@example.com,(555) 567-8901,2024-01-20,299.99,1,South,True,2024,1,20,5
+Bob Johnson,bob@test.com,555.987.6543,2024-02-10,50.00,5,East,True,2024,2,10,5
+Alice Brown,alice@domain.com,+1-555-246-8135,2024-03-05,750.00,3,West,True,2024,3,5,1
+Grace Lee,grace@email.com,555-333-4444,2024-01-30,199.99,0,West,True,2024,1,30,1

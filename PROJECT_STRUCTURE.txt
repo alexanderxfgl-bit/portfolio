@@ -1,0 +1,40 @@
+.gitignore
+portfolio/
+├── price-tracker/
+│   ├── price_tracker.py          12KB - Main tracker with scraping, DB, notifications
+│   ├── products.json              536B - Product configurations
+│   ├── requirements.txt           135B - Python dependencies
+│   ├── .env.example               375B - Environment template
+│   ├── .gitignore                 312B - Git ignore rules
+│   ├── README.md                 3.1KB - Documentation
+│   ├── LICENSE                   1.1KB - MIT License
+│   ├── sample_output.txt          999B - Example console output
+│   └── .github/workflows/
+│       └── price-track.yml        841B - GitHub Actions CI
+│
+├── api-integration-demo/
+│   ├── api_client.py             14KB - Main API client with auth, rate limiting
+│   ├── demo.py                    135B - Demo runner
+│   ├── requirements.txt           136B - Python dependencies
+│   ├── .gitignore                 296B - Git ignore rules
+│   ├── README.md                 5.9KB - Documentation
+│   ├── LICENSE                   1.1KB - MIT License
+│   ├── sample_output.txt         1.6KB - Example console output
+│   ├── tests/
+│   │   └── test_api_client.py    3.6KB - Unit tests
+│   └── .github/workflows/
+│       └── tests.yml              657B - GitHub Actions CI
+│
+└── data-cleaning-tool/
+    ├── clean_data.py             18KB - Main cleaner with transformations
+    ├── requirements.txt           182B - Python dependencies
+    ├── .gitignore                 352B - Git ignore rules
+    ├── README.md                 8.8KB - Documentation
+    ├── LICENSE                   1.1KB - MIT License
+    ├── sample_output.txt         1.3KB - Example console output
+    ├── sample_data/
+    │   └── dirty_sales.csv        770B - Sample dirty data
+    └── tests/
+        └── test_cleaner.py        5.1KB - Unit tests
+
+Total: 24 files, ~75KB of code

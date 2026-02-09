@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "name": "Wireless Bluetooth Headphones",
+      "url": "https://www.amazon.com/dp/B08WM3LMJD",
+      "target_price": 79.99,
+      "selector": ".a-price .a-offscreen"
+    },
+    {
+      "name": "4K Webcam",
+      "url": "https://www.amazon.com/dp/B087G7MGHD",
+      "target_price": 89.99,
+      "selector": ".a-price .a-offscreen"
+    },
+    {
+      "name": "Mechanical Keyboard",
+      "url": "https://www.amazon.com/dp/B07ZWK2TQT",
+      "target_price": 59.99,
+      "selector": ".a-price .a-offscreen"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+🚀 Price Tracker Started - 2024-01-15 10:30:00
+==================================================
+
+📦 Checking: Wireless Bluetooth Headphones
+   💰 Current Price: $89.99
+   🎯 Target Price: $79.99
+   ⏳ Still $10.00 above target
+   📉 Change from last check: -$5.00 (-5.3%)
+
+📦 Checking: 4K Webcam
+   💰 Current Price: $79.99
+   🎯 Target Price: $89.99
+   ✅ TARGET REACHED!
+   📉 Change from last check: -$15.00 (-15.8%)
+
+📦 Checking: Mechanical Keyboard
+   💰 Current Price: $65.00
+   🎯 Target Price: $59.99
+   ⏳ Still $5.01 above target
+   📈 Change from last check: +$2.00 (+3.2%)
+
+==================================================
+✅ Check complete. Next run: Manual or scheduled
+
+📊 Price History: Wireless Bluetooth Headphones
+--------------------------------------------------
+2024-01-15 10:30:00 | $  89.99 | ↓ $5.00  
+2024-01-14 16:00:00 | $  94.99 | ↓ $10.00 
+2024-01-13 10:00:00 | $ 104.99 | -        
+2024-01-12 10:00:00 | $ 104.99 | ↑ $5.00  
+2024-01-11 10:00:00 | $  99.99 | -        

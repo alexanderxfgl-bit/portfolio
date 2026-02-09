@@ -1,0 +1,12 @@
+# Sample dirty sales data for testing the data cleaning tool
+customer_name,email,phone,purchase_date,amount,quantity,region
+  john doe  ,john@example.com,555-1234,2024-01-15,150.00,2,North
+JANE SMITH,jane@example.com,(555) 567-8901,01/20/2024,299.99,1,south
+bob johnson,invalid-email,555.987.6543,2024-02-10,50.00,5,east
+john doe,john@example.com,555-1234,2024-01-15,150.00,2,North
+Alice Brown,alice@domain.com,+1-555-246-8135,2024-03-05,750.00,3,west
+Charlie Wilson,charlie@test.org,5559999,invalid_date,125.50,2,North
+  Diana Prince  ,diana@example.com,,2024-01-25,5000.00,1,South
+Eve Davis,eve@company.net,555-000-1111,2024-02-28,,4,East
+Frank Miller,frank@site.com,5551112222,2024-03-10,-50.00,1,north
+Grace Lee,grace@email.com,555-333-4444,2024-01-30,199.99,0,West

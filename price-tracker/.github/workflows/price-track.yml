@@ -1,0 +1,38 @@
+# GitHub Actions workflow for automated price checking
+name: Price Tracker CI
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-prices:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Run price tracker
+      env:
+        EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        ENABLE_NOTIFICATIONS: true
+      run: |
+        python price_tracker.py
+    
+    - name: Upload price database
+      uses: actions/upload-artifact@v3
+      with:
+        name: price-history
+        path: prices.db

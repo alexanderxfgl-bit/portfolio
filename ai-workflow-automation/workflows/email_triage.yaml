@@ -1,0 +1,39 @@
+name: email-triage
+description: Classify and route incoming emails using LLM
+
+nodes:
+  - id: classify
+    type: llm
+    model: openai/gpt-4o-mini
+    prompt: |
+      Classify this email into one of: urgent, support, spam, newsletter
+      Subject: {{email.subject}}
+      From: {{email.from}}
+      Body: {{email.body_preview}}
+    output_key: category
+
+  - id: route-urgent
+    type: condition
+    check: "{{category}} == 'urgent'"
+    then: notify-urgent
+
+  - id: route-support
+    type: condition
+    check: "{{category}} == 'support'"
+    then: draft-support-reply
+
+  - id: notify-urgent
+    type: webhook
+    url: "https://hooks.slack.com/services/YOUR/WEBHOOK/HERE"
+    method: POST
+    body:
+      text: "URGENT: {{email.subject}} from {{email.from}}"
+
+  - id: draft-support-reply
+    type: llm
+    model: openai/gpt-4o-mini
+    prompt: |
+      Draft a helpful, professional response to this support email.
+      Subject: {{email.subject}}
+      Body: {{email.body_preview}}
+    output_key: drafted_reply

@@ -25,7 +25,22 @@ A production-ready conversational AI engine with multi-provider LLM support, con
 
 ---
 
-### 2. E-Commerce Price Tracker (`price-tracker/`)
+### 2. AI Workflow Automation Engine (`ai-workflow-automation/`)
+A YAML-driven framework for building AI-powered business workflow automations with LLM decision nodes, conditional routing, and webhook integrations.
+
+**Key Skills Demonstrated:**
+- YAML-based workflow DSL design
+- Async Python architecture with asyncio
+- LLM-powered decision nodes
+- Webhook integrations and API orchestration
+- Human-in-the-loop approval patterns
+- Plugin/extension architecture
+
+**Tech Stack:** Python, PyYAML, LiteLLM, aiohttp, Pydantic
+
+---
+
+### 3. E-Commerce Price Tracker (`price-tracker/`)
 A production-ready price monitoring system that tracks product prices across e-commerce websites.
 
 **Key Skills Demonstrated:**

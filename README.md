@@ -1,10 +1,31 @@
-# Web Scraping Portfolio Projects
+# Alex Smith — AI Automation Engineer
 
-A collection of professional Python projects showcasing web scraping, API integration, and data processing skills.
+Freelance AI automation engineer specializing in LLM integration, workflow automation, chatbot development, and data pipeline engineering. Available for hire on [Upwork](https://www.upwork.com/) and via email.
+
+---
+
+## Portfolio Projects
+
+A collection of professional projects showcasing web scraping, API integration, AI automation, and data processing skills.
 
 ## 📁 Projects Overview
 
-### 1. E-Commerce Price Tracker (`price-tracker/`)
+### 1. AI Chatbot Engine (`ai-chatbot-engine/`)
+A production-ready conversational AI engine with multi-provider LLM support, conversation memory, and tool-use capabilities.
+
+**Key Skills Demonstrated:**
+- Multi-provider LLM integration (OpenAI, Anthropic, Gemini, local models)
+- Function/tool calling with extensible plugin system
+- FastAPI REST API with streaming (SSE)
+- Persistent conversation memory with SQLAlchemy
+- JWT authentication and rate limiting
+- Async Python architecture
+
+**Tech Stack:** Python, FastAPI, SQLAlchemy, LiteLLM, Pydantic
+
+---
+
+### 2. E-Commerce Price Tracker (`price-tracker/`)
 A production-ready price monitoring system that tracks product prices across e-commerce websites.
 
 **Key Skills Demonstrated:**
@@ -139,7 +160,7 @@ Each project can be run independently:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/alexanderxfgl-bit/portfolio.git
    cd portfolio
    ```
 
@@ -151,16 +172,19 @@ Each project can be run independently:
 
 ## 📈 Skills Showcased
 
-| Skill | Price Tracker | API Demo | Data Cleaner |
-|-------|--------------|----------|--------------|
-| Web Scraping | ✅ | ✅ | - |
-| API Integration | - | ✅ | - |
-| Data Processing | - | - | ✅ |
-| Authentication | - | ✅ | - |
-| Database/SQLite | ✅ | - | - |
-| Error Handling | ✅ | ✅ | ✅ |
-| Testing | - | ✅ | ✅ |
-| CI/CD | ✅ | ✅ | - |
+| Skill | Chatbot Engine | Price Tracker | API Demo | Data Cleaner |
+|-------|:---:|:---:|:---:|:---:|
+| LLM/AI Integration | ✅ | - | - | - |
+| Tool/Function Calling | ✅ | - | - | - |
+| REST API | ✅ | - | ✅ | - |
+| Web Scraping | - | ✅ | ✅ | - |
+| API Integration | ✅ | - | ✅ | - |
+| Data Processing | - | - | - | ✅ |
+| Authentication | ✅ | - | ✅ | - |
+| Database/SQLite | ✅ | ✅ | - | - |
+| Error Handling | ✅ | ✅ | ✅ | ✅ |
+| Testing | ✅ | - | ✅ | ✅ |
+| CI/CD | - | ✅ | ✅ | - |
 
 ---
 
@@ -172,9 +196,8 @@ All projects are released under the MIT License. See individual project LICENSE 
 
 ## 👤 Contact
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [@alexanderxfgl-bit](https://github.com/alexanderxfgl-bit)
+- Email: alexanderxfgl@gmail.com
 
 ---
 

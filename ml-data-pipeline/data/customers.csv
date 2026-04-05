@@ -1,0 +1,8 @@
+customer_id,email,age,total_spent,order_count,last_order_date
+1,alice@example.com,35,1500.00,12,2024-12-01
+2,bob@example.com,42,3200.50,28,2025-01-15
+3,charlie@example.com,,28,150.00,3,2024-06-20
+4,diana@example.com,31,890.00,7,2024-11-30
+5,,55,4200.00,35,2025-02-01
+6,frank@example.com,29,50.00,1,2024-03-15
+7,grace@example.com,38,2100.75,18,2025-01-28

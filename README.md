@@ -40,7 +40,22 @@ A YAML-driven framework for building AI-powered business workflow automations wi
 
 ---
 
-### 3. E-Commerce Price Tracker (`price-tracker/`)
+### 3. ML Data Pipeline Framework (`ml-data-pipeline/`)
+A modular framework for building machine learning data pipelines with extraction, transformation, validation, and export stages.
+
+**Key Skills Demonstrated:**
+- Modular pipeline architecture with composable stages
+- Data validation and quality checks (nulls, ranges, uniqueness, schema)
+- Multiple data sources (CSV, SQL, JSON, APIs)
+- Feature engineering transformations
+- Parquet/CSV export with versioning
+- Async execution with observability
+
+**Tech Stack:** Python, pandas, PyArrow, SQLAlchemy, Pydantic, PyYAML
+
+---
+
+### 4. E-Commerce Price Tracker (`price-tracker/`)
 A production-ready price monitoring system that tracks product prices across e-commerce websites.
 
 **Key Skills Demonstrated:**
@@ -53,17 +68,9 @@ A production-ready price monitoring system that tracks product prices across e-c
 
 **Tech Stack:** Python, BeautifulSoup4, requests, SQLite, python-dotenv
 
-**Quick Start:**
-```bash
-cd price-tracker
-pip install -r requirements.txt
-cp .env.example .env  # Edit with your settings
-python price_tracker.py
-```
-
 ---
 
-### 2. API Integration Demo (`api-integration-demo/`)
+### 5. API Integration Demo (`api-integration-demo/`)
 A comprehensive demonstration of REST API consumption with multiple authentication methods and best practices.
 
 **Key Skills Demonstrated:**

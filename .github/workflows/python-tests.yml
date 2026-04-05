@@ -1,0 +1,53 @@
+name: Python Tests
+
+on:
+  push:
+    paths:
+      - 'ai-chatbot-engine/**'
+      - 'ai-workflow-automation/**'
+      - 'ml-data-pipeline/**'
+  pull_request:
+    paths:
+      - 'ai-chatbot-engine/**'
+      - 'ai-workflow-automation/**'
+      - 'ml-data-pipeline/**'
+
+jobs:
+  test-chatbot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r ai-chatbot-engine/requirements.txt pytest pytest-asyncio
+      - name: Run tests
+        working-directory: ai-chatbot-engine
+        run: python -m pytest tests/ -v
+
+  test-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r ai-workflow-automation/requirements.txt pytest pytest-asyncio
+      - name: Run tests
+        working-directory: ai-workflow-automation
+        run: python -m pytest tests/ -v
+
+  test-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r ml-data-pipeline/requirements.txt pytest pytest-asyncio pyyaml
+      - name: Run tests
+        working-directory: ml-data-pipeline
+        run: python -m pytest tests/ -v

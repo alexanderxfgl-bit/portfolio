@@ -94,7 +94,7 @@ python demo.py
 
 ---
 
-### 3. Data Cleaning & Transformation Tool (`data-cleaning-tool/`)
+### 6. Data Cleaning & Transformation Tool (`data-cleaning-tool/`)
 A powerful pandas-based tool for cleaning, transforming, and analyzing messy datasets.
 
 **Key Skills Demonstrated:**
@@ -144,69 +144,44 @@ python clean_data.py
 
 ```
 portfolio/
-├── price-tracker/
-│   ├── price_tracker.py      # Main tracker script
-│   ├── products.json         # Product configurations
-│   ├── requirements.txt      # Dependencies
-│   ├── .env.example          # Environment template
-│   ├── README.md            # Documentation
-│   ├── LICENSE              # MIT License
-│   ├── sample_output.txt    # Example output
-│   └── .github/workflows/   # CI/CD configuration
-│
-├── api-integration-demo/
-│   ├── api_client.py        # Main API client
-│   ├── demo.py              # Demo script
-│   ├── requirements.txt     # Dependencies
-│   ├── README.md           # Documentation
-│   ├── LICENSE             # MIT License
-│   ├── sample_output.txt   # Example output
-│   ├── tests/              # Unit tests
-│   └── .github/workflows/  # CI/CD configuration
-│
-└── data-cleaning-tool/
-    ├── clean_data.py       # Main cleaning script
-│   ├── sample_data/        # Sample datasets
-│   ├── requirements.txt    # Dependencies
-│   ├── README.md          # Documentation
-│   ├── LICENSE            # MIT License
-│   ├── sample_output.txt  # Example output
-│   └── tests/             # Unit tests
+├── ai-chatbot-engine/       # Multi-provider LLM chatbot with tool-use
+├── ai-workflow-automation/  # YAML-driven AI workflow engine
+├── ml-data-pipeline/        # Modular ETL for ML training data
+├── price-tracker/           # E-commerce price monitoring
+├── api-integration-demo/    # REST API integration patterns
+├── data-cleaning-tool/      # Pandas data cleaning toolkit
+├── landing-page/            # Portfolio landing page
+├── .github/workflows/       # CI/CD for all Python projects
+├── LICENSE
+└── README.md
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-Each project can be run independently:
+```bash
+git clone https://github.com/alexanderxfgl-bit/portfolio.git
+cd portfolio
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/alexanderxfgl-bit/portfolio.git
-   cd portfolio
-   ```
-
-2. **Choose a project and follow its README**
-   
-   Each project has its own setup instructions in its README.md file.
+Each project has its own README with setup instructions.
 
 ---
 
 ## 📈 Skills Showcased
 
-| Skill | Chatbot Engine | Price Tracker | API Demo | Data Cleaner |
-|-------|:---:|:---:|:---:|:---:|
-| LLM/AI Integration | ✅ | - | - | - |
-| Tool/Function Calling | ✅ | - | - | - |
-| REST API | ✅ | - | ✅ | - |
-| Web Scraping | - | ✅ | ✅ | - |
-| API Integration | ✅ | - | ✅ | - |
-| Data Processing | - | - | - | ✅ |
-| Authentication | ✅ | - | ✅ | - |
-| Database/SQLite | ✅ | ✅ | - | - |
-| Error Handling | ✅ | ✅ | ✅ | ✅ |
-| Testing | ✅ | - | ✅ | ✅ |
-| CI/CD | - | ✅ | ✅ | - |
+| Skill | Chatbot | Workflow | Pipeline | Tracker | API Demo | Cleaner |
+|-------|:---:|:---:|:---:|:---:|:---:|:---:|
+| LLM/AI Integration | ✅ | ✅ | - | - | - | - |
+| Tool/Function Calling | ✅ | ✅ | - | - | - | - |
+| REST API | ✅ | ✅ | - | - | ✅ | - |
+| Data Processing | - | - | ✅ | - | - | ✅ |
+| Data Validation | - | - | ✅ | - | - | ✅ |
+| Async Python | ✅ | ✅ | ✅ | - | - | - |
+| Database/SQLite | ✅ | - | - | ✅ | - | - |
+| Testing | ✅ | ✅ | ✅ | - | ✅ | ✅ |
+| CI/CD | ✅ | - | ✅ | - | ✅ | - |
 
 ---
 

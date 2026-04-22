@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Smith - Software Engineer</title>
+    <meta name="description" content="Software engineer specializing in Python, web scraping, automation, and backend development. Available for contract work.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000; padding: 1rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-weight: 700; font-size: 1.5rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            background: var(--gradient); color: white; text-align: center; padding: 6rem 2rem 4rem;
+        }
+        .hero-content { max-width: 800px; }
+        .hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; animation: fadeInUp 0.8s ease; }
+        .hero .tagline { font-size: 1.4rem; font-weight: 400; opacity: 0.95; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.2s both; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; animation: fadeInUp 0.8s ease 0.4s both; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.875rem 2rem; border-radius: 8px; text-decoration: none;
+            font-weight: 600; transition: all 0.3s; animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        .btn-primary { background: white; color: var(--primary); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.6); margin-left: 1rem; }
+        .btn-outline:hover { background: white; color: var(--primary); }
+
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .section-subtitle { text-align: center; color: var(--gray); font-size: 1.05rem; margin-bottom: 3rem; }
+
+        .skills { background: white; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+        .skill-card {
+            background: var(--light); padding: 1.75rem; border-radius: 12px; text-align: center;
+            transition: all 0.3s; border: 1px solid var(--gray-light);
+        }
+        .skill-card:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .skill-icon {
+            width: 56px; height: 56px; background: var(--gradient); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.25rem; color: white; font-size: 1.5rem;
+        }
+        .skill-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .skill-card p { color: var(--gray); font-size: 0.9rem; }
+
+        .portfolio { background: var(--light); }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+        .project-card {
+            background: white; border-radius: 12px; overflow: hidden;
+            transition: all 0.3s; border: 1px solid var(--gray-light);
+        }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .project-header {
+            padding: 1.5rem 1.5rem 0.75rem; display: flex; align-items: center; gap: 1rem;
+        }
+        .project-icon {
+            width: 48px; height: 48px; background: var(--gradient); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem; flex-shrink: 0;
+        }
+        .project-header h3 { font-size: 1.15rem; font-weight: 600; }
+        .project-body { padding: 0 1.5rem 1.5rem; }
+        .tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+        .tag { background: #e0e7ff; color: var(--primary); padding: 0.2rem 0.6rem; border-radius: 16px; font-size: 0.7rem; font-weight: 600; }
+        .project-body p { color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.5; }
+        .project-links { display: flex; gap: 1rem; }
+        .project-links a { color: var(--primary); text-decoration: none; font-weight: 500; font-size: 0.9rem; display: flex; align-items: center; gap: 0.25rem; }
+        .project-links a:hover { color: var(--primary-dark); }
+
+        .badge { display: inline-flex; align-items: center; gap: 0.3rem; background: #dcfce7; color: #166534; padding: 0.2rem 0.6rem; border-radius: 16px; font-size: 0.7rem; font-weight: 600; }
+        .badge-blue { background: #dbeafe; color: #1e40af; }
+
+        .contact { background: white; }
+        .contact-links { display: flex; justify-content: center; gap: 1.25rem; margin-top: 2rem; }
+        .contact-links a {
+            width: 48px; height: 48px; background: var(--light); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gray); font-size: 1.2rem; transition: all 0.3s; text-decoration: none;
+        }
+        .contact-links a:hover { background: var(--primary); color: white; transform: translateY(-3px); }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+        footer p { opacity: 0.7; font-size: 0.9rem; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero .tagline { font-size: 1.15rem; }
+            .btn-outline { margin-left: 0; margin-top: 1rem; }
+            .section-title { font-size: 1.8rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AS</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <h1>Alex Smith</h1>
+            <p class="tagline">Software Engineer - Python, Automation & Web Scraping</p>
+            <p>
+                I build robust backends, automate complex workflows, and extract data from anywhere on the web.
+                Available for remote contract work. Fast delivery, clean code, real results.
+            </p>
+            <div>
+                <a href="mailto:alex@alex-smith.business" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Hire Me
+                </a>
+                <a href="#portfolio" class="btn btn-outline">
+                    <i class="fas fa-briefcase"></i> See My Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">What I Do</h2>
+            <p class="section-subtitle">Technologies I use daily to deliver results</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python</h3>
+                    <p>Asyncio, FastAPI, Flask, pytest. Production-grade code with type hints and error handling.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-spider"></i></div>
+                    <h3>Web Scraping</h3>
+                    <p>Scrapy, BeautifulSoup, Playwright, Selenium. Bypass anti-bot measures, handle JS-rendered pages.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI / LLM Integration</h3>
+                    <p>OpenAI, Anthropic, LangChain, vector databases. Build AI-powered tools and agents.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-plug"></i></div>
+                    <h3>APIs & Backends</h3>
+                    <p>REST, GraphQL, FastAPI, Flask. Design and build APIs that scale. Third-party integrations.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Automation</h3>
+                    <p>CI/CD, cron pipelines, task queues, browser automation. If its manual, I automate it.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                    <h3>DevOps & Cloud</h3>
+                    <p>Docker, GitHub Actions, GCP, AWS. Deploy and monitor. Linux server administration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Projects & Contributions</h2>
+            <p class="section-subtitle">Real code, real PRs, real deployments</p>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-globe"></i></div>
+                        <div>
+                            <h3>WebGrab</h3>
+                            <span class="badge"><i class="fas fa-check-circle"></i> Open Source</span>
+                            <span class="badge-blue badge"><i class="fas fa-server"></i> Deployed</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastMCP</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Cloudflare Bypass</span>
+                        </div>
+                        <p>
+                            Universal web page fetcher with cascading fallback (requests, cloudscraper, nodriver, zendriver).
+                            Deployed as an MCP server on GCP with auto-deploy via GitHub Actions. Handles anti-bot, JS rendering, and CAPTCHA bypass.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/alexanderxfgl-bit/webgrab" target="_blank"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-code-branch"></i></div>
+                        <div>
+                            <h3>VBPCApy - Merged PR</h3>
+                            <span class="badge"><i class="fas fa-check-circle"></i> Merged</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scientific Computing</span>
+                            <span class="tag">Type Hints</span>
+                        </div>
+                        <p>
+                            Contribution to Variational Bayesian PCA library. Fixed type handling for the RMS metric,
+                            improving robustness for incomplete data analysis. PR reviewed and merged by maintainer.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/yoavram-lab/VBPCApy/pull/57" target="_blank"><i class="fab fa-github"></i> PR #57</a>
+                            <a href="https://github.com/yoavram-lab/VBPCApy" target="_blank"><i class="fas fa-external-link-alt"></i> Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h3>EdgeChains - PII Redaction</h3>
+                            <span class="badge"><i class="fas fa-dollar-sign"></i> $50 Bounty</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">AWS SDK</span>
+                            <span class="tag">PII Detection</span>
+                        </div>
+                        <p>
+                            Built AWS Comprehend PII redaction utility for the EdgeChains GenAI library.
+                            Submitted as bounty PR (#452). Handles 15+ PII entity types with configurable redaction policies.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/arakoodev/EdgeChains/pull/452" target="_blank"><i class="fab fa-github"></i> PR #452</a>
+                            <a href="https://github.com/arakoodev/EdgeChains" target="_blank"><i class="fas fa-external-link-alt"></i> Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div>
+                            <h3>Price Tracker</h3>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scrapy</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <p>
+                            Automated price monitoring system. Scrapes e-commerce sites on schedule,
+                            tracks price history in Postgres, and sends alerts when prices drop below thresholds.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/alexanderxfgl-bit/portfolio/tree/main/price-tracker" target="_blank"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <div>
+                            <h3>AI Chatbot Engine</h3>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">RAG</span>
+                        </div>
+                        <p>
+                            Conversational AI engine with retrieval-augmented generation. Supports multiple LLM providers,
+                            context window management, and streaming responses.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/alexanderxfgl-bit/portfolio/tree/main/ai-chatbot-engine" target="_blank"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-stream"></i></div>
+                        <div>
+                            <h3>ML Data Pipeline</h3>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <p>
+                            End-to-end data processing pipeline. Ingests raw data, cleans/transforms with Pandas,
+                            outputs structured datasets for ML model training. Dockerized for easy deployment.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/alexanderxfgl-bit/portfolio/tree/main/ml-data-pipeline" target="_blank"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Available for remote contract work</p>
+            <div class="contact-links">
+                <a href="mailto:alex@alex-smith.business" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/alexanderxfgl-bit" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Alex Smith 2026</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
